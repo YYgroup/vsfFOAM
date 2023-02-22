@@ -1,0 +1,36 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      funkySetFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+expressions
+(
+       velocity
+       {
+            field U;
+            expression"sin(pos().x)*cos(pos().y)*cos(pos().z)*vector(1,0,0)-cos(pos().x)*sin(pos().y)*cos(pos().z)*vector(0,1,0)"
+            condition"(pos().x)";
+       }
+
+       vortexSurfaceField
+       {
+           field VSF;
+           expression"(cos(2*pos().x)-cos(2*pos().y))*cos(pos().z)";
+           condition"(pos().x<10)";
+       }
+
+);
+
+
+// ************************************************************************* //

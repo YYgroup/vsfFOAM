@@ -1,0 +1,10 @@
+EXE_INC = \
+    -I$(FOAM_INST_DIR)/vsfFOAM/src/vortexSurfaceField/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude
+
+EXE_LIBS = \
+    -lfiniteVolume \
+    -lmeshTools \
+    -L$(FOAM_USER_LIBBIN) \
+    -lVortexSurfaceField

@@ -1,0 +1,3 @@
+vsfControl/vsfControl.C
+
+LIB = $(FOAM_USER_LIBBIN)/libVortexSurfaceField
