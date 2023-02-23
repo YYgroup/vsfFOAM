@@ -11,9 +11,9 @@ of numerical simulations, the VSF elucidates mechanisms in the flows with
 essential vortex dynamics, such as turbulence and transition. 
 
 vsfFOAM is a free, open-source computational fluid dynamics package released by
-YYGroup for VSF calculations. It provides a post-processing tool <vsfPseudoEvo> 
+YYGroup for VSF calculations. It provides a post-processing tool vsfPseudoEvo 
 to obtain the VSF via solving the pseudo-transport equation based on velocity 
-field. Three solvers, <vsfIcoFoam>, <vsfPimpleFoam>, and <vsfRhoPimpleFoam> are 
+field. Three solvers, vsfIcoFoam, vsfPimpleFoam, and vsfRhoPimpleFoam are 
 included to calculate the VSF evolution with the two-time method for 
 incompressible and compressible flows.
 
