@@ -19,8 +19,8 @@ incompressible and compressible flows.
 
 # Dependence
 
-vsfFOAM is built on OpenFOAM. The current version has been validated on 
-OpenFOAM-10.
+vsfFOAM is built on [OpenFOAM](https://openfoam.org/). The current version has been validated on 
+OpenFOAM v10.
 
 # Installation
 
@@ -49,21 +49,25 @@ License terms under which you can copy the files.
 
 # References
 
-[1] Y. Yang, Theory and applications of the vortex-surface field, Chinese 
-    Science Bulletin, 65, 483-495, 2020 (In Chinese) 
-    [CSB](https://doi.org/10.1360/TB-2019-0596)
-[2] S. Xiong and Y. Yang, Identifying the tangle of vortex tubes in 
+[1] [Y. Yang, Theory and applications of the vortex-surface field, Chinese 
+    Science Bulletin, 65, 483-495, 2020 (In Chinese)
+    ](https://doi.org/10.1360/TB-2019-0596)
+    
+[2] [S. Xiong and Y. Yang, Identifying the tangle of vortex tubes in 
     homogeneous isotropic turbulence, Journal of Fluid Mechanics, 874, 
     952-978, 2019 
-    [JFM](https://doi.org/10.1017/jfm.2019.487)
-[3] Y. Zhao, Y. Yang, and S. Chen, Vortex reconnection in the late transition 
+    ](https://doi.org/10.1017/jfm.2019.487)
+    
+[3] [Y. Zhao, Y. Yang, and S. Chen, Vortex reconnection in the late transition 
     in channel flow, Journal of Fluid Mechanics, 802, R4, 2016
-    [JFM](https://doi.org/10.1017/jfm.2016.492)
-[4] Y. Yang and D. I. Pullin, Evolution of vortex-surface fields in viscous 
+    ](https://doi.org/10.1017/jfm.2016.492)
+    
+[4] [Y. Yang and D. I. Pullin, Evolution of vortex-surface fields in viscous 
     Taylor-Green and Kida-Pelz flows, Journal of Fluid Mechanics, 685, 146-164,
     2011
-    [JFM](https://doi.org/10.1017/jfm.2011.287)
-[5] Y. Yang and D. I. Pullin, On Lagrangian and vortex-surface fields in flows 
+    ](https://doi.org/10.1017/jfm.2011.287)
+    
+[5] [Y. Yang and D. I. Pullin, On Lagrangian and vortex-surface fields in flows 
     with Taylor-Green and Kida-Pelz initial conditions, Journal of Fluid 
     Mechanics, 661, 446-481, 2010
-    [JFM](https://doi.org/10.1017/S0022112010003125)
+    ](https://doi.org/10.1017/S0022112010003125)
