@@ -3,5 +3,8 @@ cd ${0%/*} || exit 1    # Run from this directory
 
 wclean solvers/incompressible/vsfIcoFoam
 wclean solvers/incompressible/vsfPimpleFoam
+wclean solvers/compressible/vsfRhoPimpleFoam
+
+wclean utilities/postProcessing/vsfPseudoEvo
 
 #------------------------------------------------------------------------------
