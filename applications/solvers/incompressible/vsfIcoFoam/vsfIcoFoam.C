@@ -35,7 +35,7 @@ Last modified
 #include "fvCFD.H"
 #include "pisoControl.H"
 #include "vsfControl.H"
-
+#include <time.h>
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 int main(int argc, char *argv[])
@@ -57,6 +57,12 @@ int main(int argc, char *argv[])
     {
         Info<< "Time = " << runTime.userTimeName() << nl << endl;
 
+        vsfTimeFile.open("vsfTime.op", std::ofstream::out | std::ofstream::app);
+        vsfTimeFile << runTime.timeName();
+
+        // Start measuring time
+        time_t t_OF = time(NULL);
+
         #include "CourantNo.H"
 
         #include "UEqn.H"
@@ -67,8 +73,25 @@ int main(int argc, char *argv[])
             #include "pEqn.H"
         }
 
+        // Stop measuring time and calculate the elapsed time
+        double cost_tOF = time(NULL) - t_OF;
+        Info << "OpenFOAM Execution Time  : " << cost_tOF  << "s" << endl;
+
+
+        // Start measuring time
+        time_t t_VSF = time(NULL);
+
         // --- VSF evolution
-        #include "vsfEqn.H"
+        #include "vsfEqn.H" //TODO:
+
+        // Stop measuring time and calculate the elapsed time
+        double cost_tVSF = time(NULL) - t_VSF;
+        Info << "VSF Execution Time  : " << cost_tVSF  << "s" << endl;
+
+        vsfTimeFile << " " << cost_tOF << " " << cost_tVSF;
+        vsfTimeFile << std::endl;
+        vsfTimeFile.close();
+
 
         runTime.write();
 

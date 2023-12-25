@@ -46,10 +46,12 @@ dimensionedScalar lengthScale
 surfaceScalarField phiVor
 (
     "phiVor",
-    fvc::flux(vor) * lengthScale
+    fvc::flux(vor) * lengthScale //FIXME:这里有区别
+    // fvc::interpolate(vor) & mesh.Sf() * lengthScale
+
 );
 
-#include "vsfCourantNo.H"
+#include "vsfCourantNo.H"   //TODO:这里计算 vsfcourant number mean
 
 // VSF deviations
 
@@ -62,17 +64,16 @@ vsfDevFile << runTime.timeName();
 #include "vsfDeviations.H"
 
 // VSF corrector
-
 while (vsfSol.correct())
 {
-    fvScalarMatrix vsfEqnCor
+    VSF.oldTime() = VSF;//将当前时刻的变量 VSF 的值赋给了它的 oldTime 属性，即将当前时刻的值保存为旧时刻的值；目的是确保在每一轮迭代中，vsfEqnCor 方程中使用的是上一时刻的值
+    fvScalarMatrix vsfEqnCor  
     (
-        fvm::ddt(vsfSol.ratioTimestep(), VSF)
-      + fvm::div(phiVor, VSF)
-      - fvm::laplacian(vsfSol.epsCor(), VSF)
+        fvm::ddt(VSF)
+        + fvm::div(phiVor, VSF)
+        - fvm::laplacian(vsfSol.epsPre(), VSF)
     );
-    
-    vsfEqnCor.solve();
+    vsfEqnCor.solve(); 
 }
 
 #include "vsfDeviations.H"

@@ -41,7 +41,7 @@ Last modified
     vsfDevMax = gMax(lambdaVorMag);
 
     vsfDevMean = 
-        gSum(lambdaVorMag*mesh.V().field())/gSum(mesh.V().field());
+        gSum(lambdaVorMag*mesh.V().field())/gSum(mesh.V().field());   //TODO:等同于average(lambda)
 }
 
 Info<< "VSF deviation mean: " << vsfDevMean 

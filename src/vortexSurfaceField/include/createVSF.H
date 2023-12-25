@@ -71,4 +71,11 @@ vsfDevFile << "time vsfDevPreMean vsfDevPreMax vsfDevCorMean vsfDevCorMax"
 
 vsfDevFile.close();
 
+std::ofstream vsfTimeFile("vsfTime.op");
+
+vsfTimeFile << "time OFTime VSFTime" 
+    << std::endl;
+
+vsfTimeFile.close();
+
 // ************************************************************************* //

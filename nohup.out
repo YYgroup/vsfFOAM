@@ -1,0 +1,155 @@
+wmake vortexSurfaceField
+wmake solvers
+wmake compressible
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+wmake vsfRhoPimpleFoam
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/ThermophysicalTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/cfdTools -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfRhoPimpleFoam.C -o Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o
+vsfRhoPimpleFoam.C:39:10: fatal error: fvCFD.H: No such file or directory
+   39 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfRhoPimpleFoam] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: compressible] Error 2
+wmake utilities
+wmake postProcessing
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+wmake vsfPseudoEvo
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/incompressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/fvModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfPseudoEvo.C -o Make/linux64GccDPInt32Opt/vsfPseudoEvo.o
+vsfPseudoEvo.C:36:10: fatal error: fvCFD.H: No such file or directory
+   36 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfPseudoEvo.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfPseudoEvo] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: postProcessing] Error 2
+wmake vortexSurfaceField
+wmake solvers
+wmake compressible
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+wmake vsfRhoPimpleFoam
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/ThermophysicalTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/cfdTools -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfRhoPimpleFoam.C -o Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o
+vsfRhoPimpleFoam.C:39:10: fatal error: fvCFD.H: No such file or directory
+   39 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfRhoPimpleFoam] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: compressible] Error 2
+wmake utilities
+wmake postProcessing
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+wmake vsfPseudoEvo
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/incompressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/fvModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfPseudoEvo.C -o Make/linux64GccDPInt32Opt/vsfPseudoEvo.o
+vsfPseudoEvo.C:36:10: fatal error: fvCFD.H: No such file or directory
+   36 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfPseudoEvo.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfPseudoEvo] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: postProcessing] Error 2
+wmake vortexSurfaceField
+wmake solvers
+wmake compressible
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+wmake vsfRhoPimpleFoam
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/ThermophysicalTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/cfdTools -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfRhoPimpleFoam.C -o Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o
+vsfRhoPimpleFoam.C:39:10: fatal error: fvCFD.H: No such file or directory
+   39 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfRhoPimpleFoam] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: compressible] Error 2
+wmake utilities
+wmake postProcessing
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+wmake vsfPseudoEvo
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/incompressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/fvModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfPseudoEvo.C -o Make/linux64GccDPInt32Opt/vsfPseudoEvo.o
+vsfPseudoEvo.C:36:10: fatal error: fvCFD.H: No such file or directory
+   36 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfPseudoEvo.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfPseudoEvo] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: postProcessing] Error 2
+wmake vortexSurfaceField
+wmake solvers
+wmake compressible
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+wmake vsfRhoPimpleFoam
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/ThermophysicalTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/cfdTools -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfRhoPimpleFoam.C -o Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o
+vsfRhoPimpleFoam.C:39:10: fatal error: fvCFD.H: No such file or directory
+   39 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfRhoPimpleFoam] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: compressible] Error 2
+wmake utilities
+wmake postProcessing
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+wmake vsfPseudoEvo
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/incompressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/fvModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfPseudoEvo.C -o Make/linux64GccDPInt32Opt/vsfPseudoEvo.o
+vsfPseudoEvo.C:36:10: fatal error: fvCFD.H: No such file or directory
+   36 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfPseudoEvo.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfPseudoEvo] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: postProcessing] Error 2
+wmake vortexSurfaceField
+wmake solvers
+wmake compressible
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+wmake vsfRhoPimpleFoam
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/ThermophysicalTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/cfdTools -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfRhoPimpleFoam.C -o Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o
+vsfRhoPimpleFoam.C:39:10: fatal error: fvCFD.H: No such file or directory
+   39 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfRhoPimpleFoam.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible/vsfRhoPimpleFoam'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfRhoPimpleFoam] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/solvers/compressible'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: compressible] Error 2
+wmake utilities
+wmake postProcessing
+make[1]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+wmake vsfPseudoEvo
+make[2]: Entering directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+g++ -std=c++14 -m64 -DLIB_NAME=libNULL.so -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -O3  -DNoRepository -ftemplate-depth-100 -I/home/dush/OpenFOAM/vsfFOAM/src/vortexSurfaceField/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/physicalProperties/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/thermophysicalModels/basic/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/momentumTransportModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/incompressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/MomentumTransportModels/compressible/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/finiteVolume/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/fvModels/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/meshTools/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/sampling/lnInclude -IlnInclude -I. -I/home/dush/OpenFOAM/OpenFOAM-11/src/OpenFOAM/lnInclude -I/home/dush/OpenFOAM/OpenFOAM-11/src/OSspecific/POSIX/lnInclude   -fPIC -c vsfPseudoEvo.C -o Make/linux64GccDPInt32Opt/vsfPseudoEvo.o
+vsfPseudoEvo.C:36:10: fatal error: fvCFD.H: No such file or directory
+   36 | #include "fvCFD.H"
+      |          ^~~~~~~~~
+compilation terminated.
+make[2]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/rules/General/transform:26: Make/linux64GccDPInt32Opt/vsfPseudoEvo.o] Error 1
+make[2]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing/vsfPseudoEvo'
+make[1]: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: vsfPseudoEvo] Error 2
+make[1]: Leaving directory '/home/dush/OpenFOAM/vsfFOAM/applications/utilities/postProcessing'
+make: *** [/home/dush/OpenFOAM/OpenFOAM-11/wmake/makefiles/apps:39: postProcessing] Error 2
