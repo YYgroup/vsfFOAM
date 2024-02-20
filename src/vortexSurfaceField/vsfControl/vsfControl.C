@@ -48,10 +48,9 @@ Foam::vsfControl::vsfControl(fvMesh& mesh)
             IOobject::NO_WRITE
         )
     ),
-    nCorr_(this->lookupOrDefault<label>("nCorrectors", 1)), // 如果字典中没有提供这一关键词，则使用此句提供的默认值
+    nCorr_(this->lookupOrDefault<label>("nCorrectors", 1)), 
     corr_(0),
     ratioTimestep_(this->lookupOrDefault<scalar>("ratioTimestep", 1.)),
-    //创建一个名为"epsPre"的dimensionedScalar对象，使用lookup方法查找字典文件中名为"epsPre"的值，并将其赋给epsPre_。
     epsPre_("epsPre", dimViscosity, this->lookup("epsPre")),
     epsCor_("epsCor", dimViscosity, this->lookup("epsCor"))
 {}

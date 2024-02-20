@@ -78,4 +78,11 @@ vsfTimeFile << "time OFTime VSFTime"
 
 vsfTimeFile.close();
 
+std::ofstream vsfEkEpsFile("vsfEkEps.op");
+
+vsfEkEpsFile << "time Ek Eps" 
+    << std::endl;
+
+vsfEkEpsFile.close();
+
 // ************************************************************************* //

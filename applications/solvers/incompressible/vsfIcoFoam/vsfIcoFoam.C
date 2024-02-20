@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
         time_t t_VSF = time(NULL);
 
         // --- VSF evolution
-        #include "vsfEqn.H" //TODO:
+        #include "vsfEqn.H" 
 
         // Stop measuring time and calculate the elapsed time
         double cost_tVSF = time(NULL) - t_VSF;
