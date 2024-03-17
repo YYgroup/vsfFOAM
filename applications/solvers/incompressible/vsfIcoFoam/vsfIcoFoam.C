@@ -60,8 +60,8 @@ int main(int argc, char *argv[])
         vsfTimeFile.open("vsfTime.op", std::ofstream::out | std::ofstream::app);
         vsfTimeFile << runTime.timeName();
 
-        // Start measuring time
-        time_t t_OF = time(NULL);
+        // Start measuring OF time
+        double ofStartTime = runTime.elapsedCpuTime();
 
         #include "CourantNo.H"
 
@@ -73,22 +73,20 @@ int main(int argc, char *argv[])
             #include "pEqn.H"
         }
 
-        // Stop measuring time and calculate the elapsed time
-        double cost_tOF = time(NULL) - t_OF;
-        Info << "OpenFOAM Execution Time  : " << cost_tOF  << "s" << endl;
+        double ofCostTime = runTime.elapsedCpuTime() - ofStartTime;
+        Info << "OpenFOAM Execution Time: " << ofCostTime  << "s" << endl;
 
 
-        // Start measuring time
-        time_t t_VSF = time(NULL);
+        // Start measuring VSF time
+        double vsfStartTime = runTime.elapsedCpuTime();
 
         // --- VSF evolution
         #include "vsfEqn.H" 
 
-        // Stop measuring time and calculate the elapsed time
-        double cost_tVSF = time(NULL) - t_VSF;
-        Info << "VSF Execution Time  : " << cost_tVSF  << "s" << endl;
+        double vsfCostTime = runTime.elapsedCpuTime() - vsfStartTime;
+        Info << "VSF Execution Time: " << vsfCostTime << "s" << endl;
 
-        vsfTimeFile << " " << cost_tOF << " " << cost_tVSF;
+        vsfTimeFile << " " << ofCostTime << " " << vsfCostTime;
         vsfTimeFile << std::endl;
         vsfTimeFile.close();
 

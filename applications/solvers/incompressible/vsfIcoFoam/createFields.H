@@ -1,14 +1,14 @@
 Info<< "Reading physicalProperties\n" << endl;
 
-IOdictionary physicalProperties     // 创建IOdictionary对象,字典变量名和字典文件名取相同
+IOdictionary physicalProperties     
 (
     IOobject
     (
-        "physicalProperties",   // 字典名称
-        runTime.constant(),     // 字典位置(在constant文件夹下)
-        mesh,    // 和mesh相关
-        IOobject::MUST_READ_IF_MODIFIED,    // 如果字典文件被修改，则必须从字典读取
-        IOobject::NO_WRITE      // 不向字典写入
+        "physicalProperties",  
+        runTime.constant(),     
+        mesh,    
+        IOobject::MUST_READ_IF_MODIFIED,    
+        IOobject::NO_WRITE     
     )
 );
     
@@ -16,7 +16,7 @@ dimensionedScalar nu
 (
     "nu",
     dimViscosity,
-    physicalProperties.lookup("nu")   //由lookup函数读取physicalProperties中的nu的值
+    physicalProperties.lookup("nu")   
 );
 
 Info<< "Reading field p\n" << endl;

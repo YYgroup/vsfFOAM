@@ -34,7 +34,7 @@ Last modified
 {
     volVectorField vsfGrad = fvc::grad(VSF);
 
-    lambdaVor = vor & vsfGrad / (mag(vor)*mag(vsfGrad));
+    volScalarField lambdaVor = vor & vsfGrad / (mag(vor)*mag(vsfGrad));
 
     volScalarField lambdaVorMag = mag(lambdaVor);
 

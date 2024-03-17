@@ -1,6 +1,3 @@
-scalar Ek = 0.0;
-scalar Eps = 0.0;
-
 IOdictionary physicalProperties     
 (
     IOobject
@@ -18,18 +15,18 @@ dimensionedScalar nu
     dimViscosity,
     physicalProperties.lookup("nu")   
 );
+
+scalar vsfEk = 0.0;
+scalar vsfEps = 0.0;
 scalar nuValue = nu.value();
 
+vsfEk = 0.5 * gSum(magSqr(U)*mesh.V().field())/gSum(mesh.V().field());
 
+volScalarField epsMag = mag((fvc::grad(U) && fvc::grad(U))); 
 
-Ek = 0.5 * gSum(magSqr(U)*mesh.V().field())/gSum(mesh.V().field());
+vsfEps = nuValue * (gSum(epsMag*mesh.V().field())/gSum(mesh.V().field()));
 
-volScalarField EpsMag = mag((fvc::grad(U) && fvc::grad(U))); 
+Info<< "VSF Ek: " << vsfEk 
+    << "  VSF Eps: " << vsfEps << endl;
 
-Eps = nuValue * (gSum(EpsMag*mesh.V().field())/gSum(mesh.V().field()));
-
-
-Info<< " Ek: " << Ek 
-    << " Eps: " << Eps << endl;
-
-vsfEkEpsFile << " " << Ek << " " << Eps;
+vsfEkEpsFile << " " << vsfEk << " " << vsfEps;

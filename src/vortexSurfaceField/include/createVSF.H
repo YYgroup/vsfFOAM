@@ -49,18 +49,19 @@ volScalarField VSF
     mesh
 );
 
-volScalarField lambdaVor
+/*volScalarField lambdaVor
 (
     IOobject
     (
         "lambdaVor",
         runTime.timeName(),
         mesh,
-        IOobject::READ_IF_PRESENT,
+        IOobject::NO_READ,
         IOobject::AUTO_WRITE
     ),
     fvc::grad(VSF)&fvc::curl(U)/mag(fvc::grad(VSF))/mag(fvc::curl(U))
 );
+*/
 
 // VSF monitor file
 
